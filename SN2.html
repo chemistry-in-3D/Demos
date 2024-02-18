@@ -119,10 +119,6 @@ var plot;
 			axisLabelColor: 'black', // sets axis label color to white
 			valueLabelColor: 'black', // Make value labels white
 			interactionModel: {},
-			highlightCallback: function(event, x, points, row, seriesName) {
-				document.getElementById("D0403_slider").value = row;
-				step_frame(document.getElementById("D0403_slider"), 'D0403');
-			},
         }
     );
 
