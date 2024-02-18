@@ -49,6 +49,10 @@
 
 <script>
 (function() {
+var customInteractionModel = Dygraph.defaultInteractionModel;
+customInteractionModel.mousemove = function(event, g, context) {
+
+};
 function adjustSquares() {
     var elements = document.querySelectorAll('#D0403, #D0403_graph');
     elements.forEach(function(el) {
@@ -118,6 +122,7 @@ var plot;
 			axisLineColor: 'black', // sets axis line color to white
 			axisLabelColor: 'black', // sets axis label color to white
 			valueLabelColor: 'black', // Make value labels white
+			interactionModel: customInteractionModel,
         }
     );
 
